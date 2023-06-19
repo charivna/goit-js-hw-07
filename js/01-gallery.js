@@ -9,7 +9,9 @@ const imageMarkup = createImageMarkup(galleryItems)
 imageContainer.addEventListener('click', onImageContainerClick)
 
 function onImageContainerClick(event) {
-   const isGallaryImageEl = event.target.classList.contains('gallery__image')
+    const isGallaryImageEl = event.target.classList.contains('gallery__image')
+    
+
     if (!isGallaryImageEl) {
         return
     }
@@ -23,7 +25,17 @@ console.log(isGallaryImageEl);
     /> </a>
 </div>`)
     instance.show()
+
+    window.addEventListener('keydown', closeModal)
+
+function closeModal(event) {
+    if (event.code === "Escape") {
+       instance.close()
+    }
 }
+}
+
+
 
 function createImageMarkup(images) {
 return images.map(({preview, original, description}) => {
