@@ -19,7 +19,7 @@ console.log(isGallaryImageEl);
     const currentItem = event.target
     
     const instance = basicLightbox.create(`<div> <a href="">
-    <img src= "${currentItem.src}" data-source="${imageSource}" alt="${currentItem.alt}"
+    <img src= "${imageSource}" width = "500"px" alt="${currentItem.alt}"
     /> </a>
 </div>`)
     instance.show()
