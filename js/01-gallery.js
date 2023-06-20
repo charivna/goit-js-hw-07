@@ -30,7 +30,8 @@ console.log(isGallaryImageEl);
 
 function closeModal(event) {
     if (event.code === "Escape") {
-       instance.close()
+        instance.close()
+        window.removeEventListener('keydown',closeModal)
     }
 }
 }
